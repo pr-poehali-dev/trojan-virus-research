@@ -20,6 +20,7 @@ export interface Article {
   content: Section[];
   firstSeen: string;
   aliases?: string[];
+  image?: string;
 }
 
 export interface Section {

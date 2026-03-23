@@ -86,6 +86,32 @@ function ArticleView({ article, onBack }: { article: Article; onBack: () => void
       </button>
 
       <div className="max-w-2xl">
+        {/* Обложка */}
+        <div
+          className="w-full h-56 rounded-sm mb-8 overflow-hidden border border-border flex items-center justify-center"
+          style={{ background: CATEGORY_BG[article.category] }}
+        >
+          {article.image ? (
+            <img
+              src={article.image}
+              alt={article.title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="flex flex-col items-center gap-2 text-center px-6">
+              <div
+                className="w-10 h-10 rounded-full flex items-center justify-center"
+                style={{ background: CATEGORY_COLORS[article.category] }}
+              >
+                <Icon name="ImageOff" size={18} className="text-white" />
+              </div>
+              <p className="text-xs font-mono" style={{ color: CATEGORY_COLORS[article.category] }}>
+                Картинка не добавлена
+              </p>
+            </div>
+          )}
+        </div>
+
         <div className="flex items-center gap-2 flex-wrap mb-4">
           <CategoryBadge category={article.category} />
           <span className="text-sm text-muted-foreground font-mono">{article.platform}</span>
