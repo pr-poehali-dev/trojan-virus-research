@@ -275,11 +275,11 @@ export const articles: Article[] = [
   {
     id: 'pirated-games',
     title: 'Пиратские игры: скрытая угроза',
-    category: 'Трояны',
+    category: 'Советы',
     platform: 'Обе платформы',
-    severity: 4,
-    firstSeen: '2000-е',
-    aliases: ['GameCrack.Trojan', 'RePack.Malware', 'Keygen.Virus'],
+    severity: 1,
+    firstSeen: '—',
+    aliases: [],
     summary: 'Не отдельный вирус, а целый класс угроз, объединённых одним вектором заражения — скачивание игр с торрентов, варез-сайтов и Telegram-каналов. Один из главных источников заражений в России.',
     content: [
       {
